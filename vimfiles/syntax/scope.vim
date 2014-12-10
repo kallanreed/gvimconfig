@@ -69,7 +69,7 @@ syn keyword scopeType string int DateTime long double float bool null
 " Highlighting Rules (portable)
 if version >= 508 || !exists("did_scope_syn_inits")
   if version < 508
-    let did_scope_syn_inits = 1"" Setup default color highlighting
+    let did_scope_syn_inits = 1
     command -nargs=+ HiLink hi link <args>
   else
     command -nargs=+ HiLink hi def link <args>
