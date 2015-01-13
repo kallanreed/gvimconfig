@@ -58,6 +58,7 @@ syn region scopeString start=/"/ skip=/\\"/ end=/"/ contains=scopeContainedParam
 syn region scopeString start=/'/ end=/'/
 syn match scopeNumber /\<[0-9]\+/
 syn match scopeDateParam /%\(Y\|m\|d\|h\)/
+syn keyword scopeBool true false
 
 " Operators
 "syn match scopeOperator /==\|+\|*\|-\|\//
@@ -75,18 +76,19 @@ if version >= 508 || !exists("did_scope_syn_inits")
     command -nargs=+ HiLink hi def link <args>
   endif
 
-  HiLink scopeComment Comment
-  HiLink scopeString  String
-  HiLink scopeNumber  Number
-  HiLink scopeDateParam Special
-  HiLink scopeContainedParamVar Special
-  HiLink scopeKeyword Keyword
-  HiLink scopeAgg     Function
-  HiLink scopePreProc Define
-  HiLink scopeDefVar  Identifier
+  HiLink scopeComment   Comment
+  HiLink scopeString    String
+  HiLink scopeNumber    Number
+  HiLink scopeBool      Number
+  HiLink scopeDateParam           Special
+  HiLink scopeContainedParamVar   Special
+  HiLink scopeKeyword   Keyword
+  HiLink scopeAgg       Function
+  HiLink scopePreProc   Define
+  HiLink scopeDefVar    Identifier
   HiLink scopeParamVar  Identifier
   HiLink scopeOperator  Operator
-  HiLink scopeType    Type
+  HiLink scopeType      Type
   delcommand HiLink
 endif
 
