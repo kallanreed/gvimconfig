@@ -8,7 +8,7 @@ $zip = $shell.Namespace("$temp\gvimconfig-master")
 
 foreach ($item in $zip.Items())
 {
-  if ($item.Name -in @("Install.ps1", "Readme.md") { continue }
+  if ($item.Name -in @("Install.ps1", "Readme.md")) { continue }
 
   Write-Host "Copying $($item.Name) to $env:USERPROFILE"
   $shell.Namespace("$env:USERPROFILE").CopyHere($item)
