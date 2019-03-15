@@ -45,3 +45,6 @@ map <F4> ?#region<CR>V/#endregion<CR>zf
 vmap <C-C> "+y
 vmap <C-X> "+x
 vmap <C-V> "+gP
+
+" Use python for nice JSON formatting
+com! FormatJson :%!python -m json.tool
