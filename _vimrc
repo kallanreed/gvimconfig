@@ -23,6 +23,7 @@ set mouse=a
 set mousehide
 set selectmode=""
 set ruler
+set vb
 
 " Set Font
 if has("gui_running")
