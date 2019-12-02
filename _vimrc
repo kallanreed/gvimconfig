@@ -23,6 +23,7 @@ set mouse=a
 set mousehide
 set selectmode=""
 set ruler
+set rulerformat=%P\ %l,%c%V,%o
 set vb
 
 " Set Font
